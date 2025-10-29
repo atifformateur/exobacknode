@@ -11,9 +11,13 @@ app.use(cors());
 
 //importer les routes
 const exo1Router = require('./routes/exo1.route');
+const evenOrOddRouter = require('./routes/even-or-odd.route');
+const stringLenght = require('./routes/string-lenght.route');
 
 //activation des routes
-app.use('/', exo1Router);
+app.use('/exo1', exo1Router);
+app.use('/even-or-odd', evenOrOddRouter);
+app.use('/string-lenght', stringLenght);
 
 //la logique qui gere les erreurs 404
 app.use((req, res) => {
